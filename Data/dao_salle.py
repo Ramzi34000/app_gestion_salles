@@ -21,7 +21,7 @@ class DataSalle:
         conn = self.get_connection()
         cursor = conn.cursor()
 
-        # Vérifier si la salle existe déjà
+        # ====================
         cursor.execute("SELECT * FROM salle WHERE code=%s", (salle.code,))
         result = cursor.fetchone()
 
