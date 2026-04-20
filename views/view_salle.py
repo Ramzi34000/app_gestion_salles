@@ -82,7 +82,7 @@ class ViewSalle(ctk.CTk):
 
         self.service.supprimer_salle(code)
         self.lister_salles()
-
+#=========================================
     def rechercher_salle(self):
         code = self.entry_code.get()
         s = self.service.rechercher_salle(code)
@@ -95,7 +95,7 @@ class ViewSalle(ctk.CTk):
             self.entry_desc.insert(0, s.description)
             self.entry_cat.insert(0, s.categorie)
             self.entry_cap.insert(0, s.capacite)
-
+#================================================
     def lister_salles(self):
         for i in self.tree.get_children():
             self.tree.delete(i)
