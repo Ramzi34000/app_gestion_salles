@@ -78,6 +78,8 @@ class ViewSalle(ctk.CTk):
 
     def supprimer_salle(self):
         code = self.entry_code.get()
+        print("Code saisi =", repr(code))
+
         self.service.supprimer_salle(code)
         self.lister_salles()
 

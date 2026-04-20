@@ -71,8 +71,9 @@ class DataSalle:
         cursor = conn.cursor()
 
         cursor.execute("DELETE FROM salle WHERE code = %s", (code,))
-        conn.commit()
+        print("Rows deleted:", cursor.rowcount)
 
+        conn.commit()
         conn.close()
 
     def update_salle(self, salle):
