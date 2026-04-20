@@ -14,7 +14,7 @@ class ViewSalle(ctk.CTk):
 
         self.service = ServiceSalle()
 
-        # ==========
+        # ========================
         self.cadreInfo = ctk.CTkFrame(self)
         self.cadreInfo.pack(pady=10)
 
@@ -30,7 +30,7 @@ class ViewSalle(ctk.CTk):
         self.entry_cap = ctk.CTkEntry(self.cadreInfo, placeholder_text="Capacité")
         self.entry_cap.grid(row=1, column=1, padx=5, pady=5)
 
-        # ==========
+        # ================================
         self.cadreBtn = ctk.CTkFrame(self)
         self.cadreBtn.pack(pady=10)
 
@@ -39,7 +39,7 @@ class ViewSalle(ctk.CTk):
         ctk.CTkButton(self.cadreBtn, text="Supprimer", command=self.supprimer_salle).grid(row=0, column=2, padx=5)
         ctk.CTkButton(self.cadreBtn, text="Rechercher", command=self.rechercher_salle).grid(row=0, column=3, padx=5)
 
-        # ==========
+        # =========================
         self.tree = ttk.Treeview(self, columns=("code", "desc", "cat", "cap"), show="headings")
 
         self.tree.heading("code", text="Code")
@@ -51,7 +51,7 @@ class ViewSalle(ctk.CTk):
 
         self.lister_salles()
 
-    # ==========
+    # ====================================
 
     def ajouter_salle(self):
         s = Salle(
